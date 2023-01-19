@@ -33,11 +33,13 @@
     <!-- Barra de navegación -->
     <nav
       id="navbar"
-      class="navbar navbar-expand-lg navbar-dark bg-light border-bottom fixed-top"
+      class="navbar navbar-expand-lg navbar-dark bg-light border-bottom fixed-top p-3"
       style="background-color: #eab9b8 !important"
     >
       <div class="container-fluid">
-        <a id="logo" class="navbar-brand" href="index.html"></a>
+        <a class="navbar-brand" href="index.html">
+          <img src="/img/logo.png" width="250" alt="Logo de la página web"
+        /></a>
         <button
           style="background-color: #eab9b8"
           class="navbar-toggler"
@@ -53,39 +55,27 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-md-auto gap-2">
             <li class="nav-item rounded">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                ><i class="bi bi-house-fill me-2"></i>Inicio</a
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="https://factoriaf5.org/"
+                >¡Calendario!</a
               >
             </li>
             <li class="nav-item rounded">
-              <a class="nav-link" href="quienes-somos/about.html"
-                ><i class="bi bi-people-fill me-2"></i>Quienes somos</a
-              >
+              <a class="nav-link" href="https://factoriaf5.org/"></a>
             </li>
             <li class="nav-item rounded">
-              <a class="nav-link" href="cartas-navidad/cartas.html"
-                ><i class="bi bi-telephone-fill me-2"></i>Cartas</a
-              >
+              <a class="nav-link" href="https://factoriaf5.org/">Láminas</a>
             </li>
             <li class="nav-item rounded">
-              <a class="nav-link" href="videos-navidad/videos.html"
-                ><i class="bi bi-telephone-fill me-2"></i>Videos</a
-              >
+              <a class="nav-link" href="https://factoriaf5.org/">Papelería</a>
             </li>
             <li class="nav-item rounded">
-              <a class="nav-link" href="contacto/contacto.html"
-                ><i class="bi bi-telephone-fill me-2"></i>Contacto</a
-              >
+              <a class="nav-link" href="https://factoriaf5.org/">Cursos</a>
             </li>
-            <li class="nav-item rounded">
-              <a class="nav-link" href="aplicacion-nino/app.html"
-                ><i class="bi bi-telephone-fill me-2"></i>App</a
-              >
-            </li>
-            <li class="nav-item rounded">
-              <a class="nav-link" href="log-in/log-in.html"
-                ><i class="fa fa-tree"></i
-              ></a>
+            <li class="nav-item rounded" ml-3>
+              <a class="nav-link" href="https://factoriaf5.org/">Contacto</a>
             </li>
           </ul>
         </div>
@@ -134,27 +124,19 @@
           </div>
 
           <div class="row">
-            <!-- Grupo Usuario -->
-            <div class="col-md-6 mt-5" id="userNameField">
-              <label class="visually-hidden" for="inlineFormInputGroupUsername"
-                >Usuario</label
-              >
+            <!-- Grupo DNI -->
+            <div class="col-md-6 mt-3" id="dniField">
+              <label class="form-label">DNI</label>
               <div class="input-group">
-                <div class="input-group-text">@</div>
                 <input
-                  id="userName"
+                  id="dni"
                   type="text"
-                  name="username"
                   class="form-control"
-                  placeholder="Username"
-                  required
+                  placeholder="XXXXXXXXL"
                 />
                 <i class="form-validation-state fas fa-times-circle"></i>
               </div>
-              <p class="form-input-error">
-                El usuario tiene que ser de 4 a 16 dígitos y solo puede contener
-                numeros, letras y guion bajo.
-              </p>
+              <p>Debe seguir este formato: XXXXXXXXL</p>
             </div>
 
             <!-- Grupo Género -->
@@ -169,48 +151,6 @@
             </div>
           </div>
 
-          <!-- Clave
-          <div class="col-6" id="passwordField">
-            <label for="exampleInputPassword1" class="form-label"
-              >Password</label
-            >
-            <div class="input-group">
-              <input
-                type="password"
-                class="form-control"
-                name="password"
-                id="password"
-                required
-              />
-              <i class="form-validation-state fas fa-times-circle"></i>
-            </div>
-            <p class="form-input-error">
-              La contraseña tiene que ser de 4 a 12 dígitos.
-            </p>
-          </div>
-
-          Confirmación de clave
-          <div class="col-6" id="password2Field">
-            <label for="exampleInputPassword1" class="form-label"
-              >Password</label
-            >
-            <div class="input-group">
-              <input
-                type="password"
-                class="form-control pointer-evnt-none"
-                name="password2"
-                id="password2"
-              />
-              <i class="form-validation-state fas fa-times-circle"></i>
-            </div>
-            <p class="form-input-error">
-              La contraseña tiene que ser de 4 a 12 dígitos.
-            </p>
-          </div>
-
-          <p class="form-input-error">
-            La contraseña tiene que ser de 4 a 12 dígitos.
-          </p> -->
 
           <!-- Email -->
           <div class="col-12 mb-3" id="emailField">
@@ -306,12 +246,12 @@
           <div class="mt-3" id="knowSelectField">
             <label for="select2">Donde nos conociste</label>
             <select id="knowSelect" class="form-select">
-              <option value="init">Seleccione una de las opciones</option>
-              <option value="Redes">Por Redes Sociales</option>
-              <option value="Amigos">A través de un amigo</option>
-              <option value="Google">Por un buscador: google u otro</option>
-              <option value="Otra web">A trávez de otra web</option>
-              <option value="Blog">Por un listado de blogs</option>
+              <option id="init">Seleccione una de las opciones</option>
+              <option id="Redes">Por Redes Sociales</option>
+              <option id="Amigos">A través de un amigo</option>
+              <option id="Google">Por un buscador: google u otro</option>
+              <option id="Otra web">A trávez de otra web</option>
+              <option id="Blog">Por un listado de blogs</option>
             </select>
             <p class="form-input-error">No ha seleccionado ninguna opción</p>
           </div>
@@ -339,7 +279,7 @@
               id="conditions"
             />
             <label class="form-check-label" for="flexSwitchCheckChecked"
-              >Acepto término y condiciones de RGDP</label
+              >Acepto término y condiciones</label
             >
             <p class="form-input-error">
               Debe aceptar los términos y condiciones
@@ -358,21 +298,27 @@
             </h2>
           </div>
 
-          <!-- Recuerdame -->
-          <!-- <div class="form-check mb-3">
-            <input
-              type="checkbox"
-              class="form-check-input"
-              value=""
-              id="remember"
-            />
-            <label for="check1" class="form-check-label">Recuerdame</label>
-          </div> -->
           <!-- Enviar -->
-          <div class="mb-3">
-            <button type="submit" class="btn btn-primary" id="sendButton">
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="submit" class="btn btn-light" id="sendButton">
               Enviar
             </button>
+            <div>
+              <p
+                class="form-message-good"
+                id="form-message-good"
+              >
+                El formulario se envió correctamente
+              </p>
+            </div>
+          </div>
+          <!-- MENSAJE DE CAMPOS REQUERIDOS -->
+          <div class="form-message" id="form-message">
+            <p class="form-message-error">
+              <i class="fas fa-exclamation-circle">
+                <b>Error:</b> Debes completar todos los campos</i
+              >
+            </p>
           </div>
         </form>
       </div>
@@ -382,87 +328,26 @@
       class="border-top text-center text-white"
       style="background-color: #ebe4dc"
     >
-      <div class="container mt-5">
-        <section class="mb-3">
-          <div>
-            <!--p>NEWSLETTER</p-->
-            <p class="titleFooter">
-              Apúntate a nuestra newsletter para enterarte de novedades y ventas
-              exclusivas
-            </p>
-            <div class="form-group d-flex">
-              <label for="emailnewsletter" class="sr-only">Email</label>
-              <input
-                style="max-width: 245px"
-                type="email"
-                class="form-control tooltipjs"
-                id="emailnewsletter"
-                placeholder="Email"
-                title="Tu e-mail es necesario"
-              />
-              <!-- <button
-                type="submit"
-                id="buttonNewsletter"
-                class="btn btn-primary mb-2"
-              >
-                Sí, quiero
-              </button> -->
-            </div>
-
-            <p class="small" style="margin-top: 10px">
-              <input
-                style="top: 2px; position: relative"
-                id="privacyNewsletter"
-                class="tooltipjs"
-                type="checkbox"
-                title="Acepta la política de privacidad"
-              />
-              <label style="font-weight: normal" for="privacyNewsletter">
-                Acepto la
-                <a href="/es/legal" target="_blank"
-                  >política de privacidad</a
-                ></label
-              >
-            </p>
-            <br />
-            <br />
-          </div>
+      <div class="container mt-8">
+        <section>
+          <img
+            class="footer-logo"
+            width="300"
+            src="/img/logo.png"
+            alt="Logo del portafolio"
+          />
           <div class="text-center">
+            <p>Estamos en Madrid y diseñamos para el mundo entero.</p>
+            <p>© CristinaMaser, derechos reservados</p>
             <p>
-              Estamos en Madrid y diseñamos para el mundo entero.
-              <a
-                rel="alternate"
-                hreflang="en"
-                href="https://cristinamaser.com/en/contact"
-                >English</a
-              >
-              | <a href="https://blog.cristinamaser.com">Blog</a> |
-              <a href="/es/sobre-nosotros">Nosotras</a>
-            </p>
-            <p>
-              © CristinaMaser, derechos reservados |
-              <a href="/es/legal" target="_blank">Legal</a> |
-              <!--Versión: 1.2 |-->
-              <a href="/es/private">Privado</a> |
-              <a href="#" class="pdcc-open-modal">Panel Cookies</a>
-            </p>
-            <p>
-              <strong>¡Descubre nuestras apps!</strong>
-              <a
-                href="https://play.google.com/store/apps/details?id=com.cristinamaser.weddingInvitation"
-                target="_blank"
-                >Android</a
-              >
-              |
-              <a
-                href="https://apps.apple.com/us/app/invitaciones-de-boda-by-cm/id1521701362"
-                >Apple</a
+              <strong
+                >¡Descubre nuestras más en nuestras redes sociales!</strong
               >
             </p>
           </div>
-          <div>
+          <div class="mb-4">
             <a
-              class="btn btn-outline-secondary btn-floating m-1"
+              class="btn btn-outline-secondary btn-floating"
               href="https://www.facebook.com/factoriaf5/"
               target="_blank"
               role="button"
@@ -497,11 +382,9 @@
               ><i class="fa fa-youtube"></i
             ></a>
           </div>
-          <div class="text-center p-3" style="background-color: #eab9b8">
-            ©2023 Copyright: Maser C.A
-          </div>
         </section>
       </div>
+      <div class="bar"><strong>©2023 Copyright: Maser C.A</strong></div>
     </footer>
 
     <!-- Bootstrap -->

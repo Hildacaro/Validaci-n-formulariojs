@@ -1,2 +1,2 @@
-# validacion-de-formulario
-Formulario validado con JavaScrip
+# validación-de-formulario
+Formulario validado con JavaScript
